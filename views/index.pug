@@ -1,0 +1,26 @@
+extends layout
+
+block content
+      .container-fluid
+      nav.navbar.navbar-expand-sm.bg-primary
+        a.navbar-brand(href="/") Exercise 5
+        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarItems", aria-controls="navbarItems", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarItems.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link.active(aria-current="page", href="/")
+                | Home
+                span.sr-only  (current)
+            li.nav-item
+              a.nav-link(href="/map") Map
+            li.nav-item
+              a.nav-link(href="/chart") Chart
+            li.nav-item
+              a.nav-link(href="/impressum") Impressum 
+      .mb-3
+        form(action="/" method='post', enctype='multipart/form-data')
+          label.form-label(for='fileupload1') Upload JSON-Data
+          input#fileupload1.form-control(type='file' name='fileupload1')
+          input(type='submit', name='Submit',class='btn btn-primary',value='Submit')
+      
