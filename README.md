@@ -1,8 +1,9 @@
 # WebGIS05
 This is a repository for exercise 5
 
-# WebGIS05
-This is a repository for exercise 5
+command prompt: npm start
+port: localhost:3000
+
 
 features:
 - utilizes PUG view engine
